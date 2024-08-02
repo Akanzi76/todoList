@@ -1,0 +1,162 @@
+/* Genel Ayarlar */
+* {
+    list-style-type: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Ana Konteyner */
+  #container {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    background-color: #4b0082;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    color: #ffd700;
+  }
+  
+  /* Başlıklar */
+  #addNewTodoHeader,
+  #todoListHeader {
+    background-color: #6a0dad;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1.3em;
+    text-transform: uppercase;
+  }
+  
+  /* Giriş Alanları */
+  #addTodoName,
+  #searchTodo {
+    width: 80%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ffd700;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #4b0082;
+    font-size: 1em;
+    outline: none;
+  }
+  
+  #addTodoName:focus,
+  #searchTodo:focus {
+    border-color: #6a0dad;
+  }
+  
+  /* Butonlar */
+  #addTodoButton,
+  #clearAllButton {
+    background-color: #ffd700;
+    color: #4b0082;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  #addTodoButton:hover,
+  #clearAllButton:hover {
+    background-color: #e5c100;
+    transform: translateY(-2px);
+  }
+  
+  #addTodoButton:active,
+  #clearAllButton:active {
+    transform: translateY(0);
+  }
+  
+  /* Liste İçeriği */
+  #listContent {
+    background-color: #ffffff;
+    color: #4b0082;
+    width: 100%;
+    height: 230px;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-y: auto;
+    border: 2px solid #6a0dad;
+  }
+  
+  /* Liste Öğesi Stili */
+  .list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #4b0082;
+    color: #ffd700;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .list-item:hover {
+    background-color: #6a0dad;
+  }
+  
+  .todo-name {
+    flex-grow: 1; /* Adın düğme ile aynı hizada olmasını sağlar */
+    margin-right: 10px; /* Ad ve düğme arasında boşluk bırakır */
+    word-wrap: break-word; /* Adın taşmasını önler */
+  }
+  
+  /* Highlight Stili */
+  .highlight {
+    background-color: #ffd700;
+    color: #4b0082;
+    padding: 0 2px; /* Daha belirgin hale getirmek için biraz iç boşluk ekleyin */
+    border-radius: 3px; /* Köşeleri yuvarlaklaştırın */
+  }
+  
+  /* Delete Button Stili */
+  .deleteButton {
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .deleteButton:hover {
+    background-color: #cc0000;
+    transform: translateY(-2px);
+  }
+  
+  .deleteButton:active {
+    transform: translateY(0);
+  }
+  
+  /* Scrollbar Stili */
+  #listContent::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  #listContent::-webkit-scrollbar-thumb {
+    background-color: #4b0082;
+    border-radius: 4px;
+  }
+  
